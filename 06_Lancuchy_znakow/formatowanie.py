@@ -52,3 +52,4 @@ for i in range(level):
 for i in range(2):
     poziom = S * (level-i-1) + (2 * i + 1) * G
     print(poziom)
+
