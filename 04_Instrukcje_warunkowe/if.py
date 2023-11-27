@@ -41,3 +41,15 @@ if (suma_cyfr % 7 == 0) and (i % 2 == 0):
     print(f'Dobra liczba')
 else:
     print(f'Zła liczba')
+
+
+
+
+a = int(input('podaj liczbe dwucyfrowa'))
+suma_liczb_dwucyf = ( a % 10 + a // 10)
+print(suma_liczb_dwucyf)
+if (suma_liczb_dwucyf %7 == 0 ) and (a % 2 == 0):
+    print('Dobra liczba')
+else:
+    print('Zla liczba')
+
