@@ -48,3 +48,13 @@ while n > 0:
 else:
     print('Koniec')
 
+
+
+n = 100
+while n > 0:
+    n -= 1
+    suma_liczb = ( n % 10 + n // 10)
+     if (suma_liczb %7 == 0 ) and (n % 2 == 0):
+        print(n)
+     else:
+        print('Zla liczba')
