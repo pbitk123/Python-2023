@@ -21,3 +21,7 @@ for i in range(10):
         break
 else:
     print("Koniec")
+
+
+
+
