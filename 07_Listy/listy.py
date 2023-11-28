@@ -39,6 +39,54 @@ l
 "".join(["Ala", "ma", "kota"])
 " ".join(["Ala", "ma", "kota"])
 s2 = '.|.'
-s2.join(["Ala", "ma", "kota"])
 
 '.' in s2
+3 in l
+
+'.' in s2
+
+
+
+l.insert(100,2)
+
+l.insert(2,100)
+
+
+
+i = input('podaj text')
+l = []
+
+ for n in i:
+     l.append(i)
+     print(l)
+
+
+napisy = []
+
+while True:
+    napis = input("Wprowadź dowolne słowo: ")
+
+    if not napis:
+        break
+
+    napisy.append(napis)
+
+napisy.sort()
+print(napisy)
+
+
+liczby = []
+
+while True:
+    liczba = int(input("Wprowadź dowolne liczbe: "))
+
+    if liczba % 2 != 0:
+        break
+
+    liczby.append(liczba)
+liczby.sort()
+liczby.pop()
+print(liczby)
+
+
+
