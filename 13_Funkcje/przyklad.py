@@ -71,3 +71,51 @@ def choinka(poziom, separator=" ", znak="*"):
 
 choinka(5)
 choinka(znak='#', poziom=6)
+
+def funkcja1():
+    return 0
+
+def funkcja2():
+    return 1
+
+s = { 'first': funkcja1, 'second': funkcja2 }
+
+klucz = input('Podaj klucz')
+funkcja = s[klucz]
+print(funkcja)
+
+#zadanie 1
+
+def funkcja1(x):
+    suma = 1 +1
+    return suma
+
+def funkcja2(x):
+    roznica = 4 - 3
+    return roznica
+
+slownik = { 'first': funkcja1, 'second': funkcja2 }
+
+klucz = input("Podaj klucz")
+
+funkcja = slownik[klucz]
+print(funkcja(2))
+
+
+
+# zadanie2
+
+def alphabet_range(end="Z", step=1, start="A"):
+    return [chr(x) for x in range(ord(start), ord(end), step)]
+
+alphabet_range('F')
+
+
+def alphabet_range(end="Z", step=1, start="A"):
+    return (chr(x) for x in range(ord(start), ord(end), step))
+
+alphabet_range('F')
+list(alphabet_range(end='z',start='a')
+
+
+

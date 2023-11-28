@@ -58,3 +58,152 @@ s
 'a' in s
 
 s = {1: "a", 2: 'b', "ala": [3, 4]}
+
+
+s={}
+napisy = []
+
+while True:
+    napis = input("Wprowadź dowolne napis: ")
+
+    if not napis:
+        break
+    napisy.append(napis)
+
+for i in napisy:
+    if s.get(i, 0) == 0:
+        s |={i: 1}
+    else:
+        print (i)
+        s[i] += 1
+print(f"Tak się sprawy maja: {d}")
+
+
+l = []
+d = {}
+while True:
+    napis = input("Podaj napis, a dodam go do listy: ").strip()
+    if napis == "":
+        break
+    l.append(napis)
+
+for i in l:
+    if d.get(i, 0) == 0:
+        d |= {i: 1}
+    else:
+        print (i)
+        d[i] += 1
+print(f"Tak się sprawy mają: {d}")
+
+
+
+l = []
+d = {}
+while True:
+    napis = input("Podaj napis, a dodam go do listy: ").strip()
+    if napis == "":
+        break
+    l.append(napis)
+#l = ['Ala', 'ma', 'kota', 'kota']
+for i in l:
+    if d.get(i, 0) == 0:
+        d[i]=1
+    else:
+        print (i)
+        d[i] += 1
+print(f"Tak się sprawy mają: {d}")
+
+
+## trzecia wersja
+
+l = []
+d = {}
+while True:
+    napis = input("Podaj napis, a dodam go do listy: ").strip()
+    if napis == "":
+        break
+    l.append(napis)
+
+print(l)
+#l = ['Ala', 'ma', 'kota', 'kota']
+for i in l:
+    licznik = d.get(i,0)
+    licznik +=1
+    d[i] = licznik
+
+  #  if d.get(i, 0) == 0:
+  #      d[i]=1
+  #  else:
+  #      print (i)
+  #      d[i] += 1
+print(f"Tak się sprawy mają: {d}")
+
+
+
+# Dla wczytanej liczby z wejścia z zakresu 1-999 wypisać jej postać słowną
+#  - np. dla `73` wypisać `siedemdziesiąt trzy`
+
+
+# poprawne rozwiazanie bez funkcji bład na nastakch
+
+jednosci = ["", "jeden", "dwa", "trzy", "cztery", "pięć", "sześć", "siedem", "osiem", "dziewięć"]
+nastki = ["", "jedenaście", "dwanaście", "trzynaście", "czternaście", "piętnaście", "szesnaście", "siedemnaście",
+              "osiemnaście", "dziewiętnaście"]
+dziesiatki = ["", "dziesięć", "dwadzieścia", "trzydzieści", "czterdzieści", "pięćdziesiąt", "sześćdziesiąt",
+                  "siedemdziesiąt", "osiemdziesiąt", "dziewięćdziesiąt"]
+setki = ["", "sto", "dwieście", "trzysta", "czterysta", "pięćset", "sześćset", "siedemset", "osiemset",
+             "dziewięćset"]
+
+
+while True:
+    liczba = int(input("podaj liczbe z za zakresu 1-999"))
+    if liczba >=1 and liczba<=999:
+        break
+
+jednostka = jednosci[liczba % 10]
+print(jednostka)
+dziesiatka = dziesiatki[(liczba // 10) % 10]
+print(dziesiatka)
+
+    if (liczba >= 10 or liczba <= 20):
+    nastka = nastki[liczba % 10]
+    else:
+     ""
+
+print(nastka)
+setka = setki[(liczba // 100) % 10]
+print(setka)
+
+wynik = f"{setka} {dziesiatka} {nastka} {jednostka}".strip()
+
+print(f"{liczba} - {wynik}")
+
+
+# poprawne rozwiazanie by function
+
+def liczba_slownie(liczba):
+    jednosci = ["", "jeden", "dwa", "trzy", "cztery", "pięć", "sześć", "siedem", "osiem", "dziewięć"]
+    nastki = ["", "jedenaście", "dwanaście", "trzynaście", "czternaście", "piętnaście", "szesnaście", "siedemnaście",
+              "osiemnaście", "dziewiętnaście"]
+    dziesiatki = ["", "dziesięć", "dwadzieścia", "trzydzieści", "czterdzieści", "pięćdziesiąt", "sześćdziesiąt",
+                  "siedemdziesiąt", "osiemdziesiąt", "dziewięćdziesiąt"]
+    setki = ["", "sto", "dwieście", "trzysta", "czterysta", "pięćset", "sześćset", "siedemset", "osiemset",
+             "dziewięćset"]
+
+    jednostka = jednosci[liczba % 10]
+    dziesiatka = dziesiatki[(liczba // 10) % 10]
+    nastka = nastki[liczba % 100] if 10 < liczba % 100 < 20 else ""
+    setka = setki[(liczba // 100) % 10]
+
+    wynik = f"{setka} {dziesiatka} {nastka} {jednostka}".strip()
+    return wynik.capitalize()
+
+while True:
+    liczba = int(input("Podaj liczbę (1-999): "))
+    if 1 <= liczba <= 999:
+        break
+
+postac_slowna = liczba_slownie(liczba)
+print(f"{liczba} - {postac_slowna}")
+
+
