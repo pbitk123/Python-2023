@@ -88,5 +88,22 @@ liczby.sort()
 liczby.pop()
 print(liczby)
 
+###zadanie
+
+lista = []
+parzysta = 0
+while True:
+    element = input("Wprowadź dowolne liczbe: ")
+    if not element:
+        break
+    lista.append(element)
+lista.sort(reverse=True)
+for a in lista:
+    if (int(a) % 2 == 0):
+        parzysta =a
+        break
+
+print(parzysta)
+
 
 
