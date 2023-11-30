@@ -72,7 +72,7 @@ class IntValue:
     def __init__(self, value):
         self.value = value
 
-    def __repr__(self):
+    def __repr__gg(self):
         return "IntValue(%d)" % (self.value)
 
     def __gt__(self, other):

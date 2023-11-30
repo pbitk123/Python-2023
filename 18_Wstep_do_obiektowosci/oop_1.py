@@ -7,8 +7,8 @@ class MyClass:
     def f(self):
         return f'hello world {self.n}'
 
-
 o1 = MyClass(1)
+
 o2 = MyClass(2)
 
 o1
